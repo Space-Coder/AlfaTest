@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using log4net;
 using System.Windows;
 
 namespace AlfaTest
@@ -13,5 +8,18 @@ namespace AlfaTest
     /// </summary>
     public partial class App : Application
     {
+        private static readonly ILog log = LogManager.GetLogger(typeof(App));
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            log4net.Config.XmlConfigurator.Configure();
+            base.OnStartup(e);
+            log.Info("Application startup");
+        }
+
+        protected override void OnExit(ExitEventArgs e)
+        {
+            base.OnExit(e);
+            log.Info("Application shutdown");
+        }
     }
 }

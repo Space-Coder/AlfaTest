@@ -1,9 +1,20 @@
-﻿<Application x:Class="AlfaTest.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:AlfaTest"
-             StartupUri="MainWindow.xaml">
+﻿<Application
+    x:Class="AlfaTest.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:AlfaTest"
+    StartupUri="MVVM\View\Workspace.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Resources/Styles/ControlsDictionary.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources/Styles/Colors/Theme.Dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Resources/Styles/Colors/Primary.Red.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Dark.Red.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/InfoBar;component/Resources/Theme.Dark.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -5,6 +5,35 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <Copyright>Alexey Zhegzdrin</Copyright>
+    <PackageProjectUrl>https://github.com/Space-Coder/AlfaTest</PackageProjectUrl>
+    <Description>Test task for Alfa-Bank Belarus</Description>
+    <Company>Alexey Zhegzdrin (Spacecoder)</Company>
+    <Authors>Spacecoder</Authors>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="log4net.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.20.0" />
+    <PackageReference Include="InfoBar" Version="1.0.0" />
+    <PackageReference Include="log4net" Version="2.0.15" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.9" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.19" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="data.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
 </Project>
