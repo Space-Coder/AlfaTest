@@ -10,7 +10,7 @@ namespace AlfaTest
         private static bool isHide = false;
         private static FrameworkElement elemntForHide;
         private static DoubleAnimation doubleAnimation;
-        private static readonly CircleEase ease = new CircleEase()
+        private static readonly CircleEase ease = new()
         {
             EasingMode = EasingMode.EaseInOut
         };
@@ -24,7 +24,7 @@ namespace AlfaTest
                 Duration = new Duration(TimeSpan.FromSeconds(duration)),
                 EasingFunction = ease,
             };
-            ScaleTransform scaleTransform = new ScaleTransform();
+            ScaleTransform scaleTransform = new();
             element.RenderTransform = scaleTransform;
             element.RenderTransformOrigin = new Point(0.5, 0.5);
             element.RenderTransform.BeginAnimation(ScaleTransform.ScaleXProperty, doubleAnimation);

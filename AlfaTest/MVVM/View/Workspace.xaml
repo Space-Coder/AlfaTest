@@ -22,7 +22,7 @@
     TitleCharacterCasing="Normal"
     TitleForeground="{DynamicResource DefaultColor}"
     WindowStartupLocation="CenterScreen"
-    WindowTitleBrush="Transparent"
+    WindowTitleBrush="{DynamicResource AppColorQuarternary}"
     mc:Ignorable="d">
     <metro:MetroWindow.TitleTemplate>
         <DataTemplate>
@@ -119,7 +119,7 @@
                         <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
                         <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
                         <Setter Property="Background" Value="Transparent" />
-                        <Setter Property="BorderBrush" Value="Transparent" />
+                        <Setter Property="BorderBrush" Value="#f03226" />
                         <Setter Property="BorderThickness" Value="0" />
                         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
                         <Setter Property="Template">
@@ -142,8 +142,8 @@
                                             <MultiTrigger.Conditions>
                                                 <Condition Property="IsMouseOver" Value="True" />
                                             </MultiTrigger.Conditions>
-                                            <Setter TargetName="Bd" Property="Background" Value="{DynamicResource AppColorTetriary}" />
-                                            <Setter Property="Foreground" Value="White" />
+                                            <Setter TargetName="Bd" Property="Background" Value="Transparent" />
+                                            <Setter Property="BorderThickness" Value="2" />
                                         </MultiTrigger>
                                         <MultiTrigger>
                                             <MultiTrigger.Conditions>
@@ -151,15 +151,15 @@
                                                 <Condition Property="IsSelected" Value="True" />
                                             </MultiTrigger.Conditions>
                                             <Setter TargetName="Bd" Property="Background" Value="Gray" />
-                                            <Setter Property="Foreground" Value="White" />
+
                                         </MultiTrigger>
                                         <MultiTrigger>
                                             <MultiTrigger.Conditions>
                                                 <Condition Property="Selector.IsSelectionActive" Value="True" />
                                                 <Condition Property="IsSelected" Value="True" />
                                             </MultiTrigger.Conditions>
-                                            <Setter TargetName="Bd" Property="Background" Value="#f03226" />
-                                            <Setter Property="Foreground" Value="White" />
+                                            <Setter TargetName="Bd" Property="Background" Value="Transparent" />
+                                            <Setter Property="BorderThickness" Value="2" />
                                         </MultiTrigger>
                                         <Trigger Property="IsEnabled" Value="False">
                                             <Setter TargetName="Bd" Property="TextElement.Foreground" Value="Gray" />
