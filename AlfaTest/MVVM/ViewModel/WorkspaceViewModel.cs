@@ -165,10 +165,11 @@ namespace AlfaTest.MVVM.ViewModel
                     if (ChannelCollectionView != null)
                     {
                         ListSortDirection direction = isSortAScending == true ? ListSortDirection.Ascending : ListSortDirection.Descending;
+                        string description = isSortAScending == true ? "по возрастанию" : "по убывванию";
                         ChannelCollectionView.SortDescriptions.Clear();
                         ChannelCollectionView.SortDescriptions.Add(new SortDescription("Date", direction));
                         isSortAScending = !isSortAScending;
-                        currentWindow.InfoBarBox.ShowMessage("Данные успешно отсортированы", InfoBar.InfoBarStatus.SUCCESS, InfoBar.InfoBarPosition.TOP, 3000);
+                        currentWindow.InfoBarBox.ShowMessage($"Данные успешно отсортированы {description}", InfoBar.InfoBarStatus.SUCCESS, InfoBar.InfoBarPosition.TOP, 3000);
                     }
                     else
                     {

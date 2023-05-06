@@ -249,13 +249,13 @@
                 </ListView.ItemTemplate>
             </ListView>
         </Grid>
-        <info:InfoBarBox
-            x:Name="InfoBarBox"
-            Margin="1,-95,-1,0"
-            VerticalAlignment="Top" />
         <Grid
             x:Name="ExportCard"
-            Margin="273,152,273,152"
+            Width="304"
+            Height="180"
+            Margin="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
             Background="{DynamicResource AppColorQuarternary}"
             Opacity="0"
             Visibility="Collapsed">
@@ -297,5 +297,9 @@
                 FontFamily="Segoe UI"
                 FontSize="18" />
         </Grid>
+        <info:InfoBarBox
+            x:Name="InfoBarBox"
+            Margin="1,-95,-1,0"
+            VerticalAlignment="Top" />
     </Grid>
 </metro:MetroWindow>
